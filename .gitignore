@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# virtual env
+rtd-env/*
+
+# vs code
+.vscode
