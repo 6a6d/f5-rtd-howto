@@ -13,3 +13,7 @@ Frequently Asked Questions
 - Could this make me awesome?
 
   - ...meh
+
+- Can I use last year's content as a starting place?
+
+  - Absolutely!  Heres how you do just that...
