@@ -1,5 +1,12 @@
 Read the Docs How To
-=========
+====================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Use Cases
+   :glob:
+
+   use/use*
 
 .. toctree::
    :maxdepth: 2
