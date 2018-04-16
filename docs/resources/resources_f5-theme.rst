@@ -2,9 +2,11 @@
 F5 Sphinx Theme
 ***************
 
+.. _f5-sphinx-theme: https://github.com/6a6d/f5-rtd-howto
+
 Setup and Configuration
 =======================
-1. Download or ``git clone`` the f5-sphinx-theme.
+1. Download or ``git clone`` the `f5-sphinx-theme`_.
 2. ``pip install .`` from the f5-sphinx-theme base directory.
 3. ``pip install -r requirements.txt`` to ensure dependencies are present.
 4. Add ``f5-sphinx-theme`` to the "import" section of your project's ``conf.py`` (replace any existing theme import). ::
