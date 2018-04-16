@@ -2,7 +2,7 @@
 F5 Sphinx Theme
 ***************
 
-.. _f5-sphinx-theme: https://github.com/6a6d/f5-rtd-howto
+.. _f5-sphinx-theme: https://github.com/0xHiteshPatel/f5-sphinx-theme
 
 Setup and Configuration
 =======================
