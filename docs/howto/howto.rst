@@ -53,7 +53,7 @@ To create a Python virtual environment and install Sphinx within said environmen
   $ pip install sphinx-autobuild
   $ pip install sphinx_rtd_theme
 
-To exit the virtual environment run the following command.
+If you want to exit the virtual environment, use the below command.
 
 .. code-block:: none
   :linenos:
@@ -69,6 +69,13 @@ Change to your project directory.
   :linenos:
 
   $ cd my_project
+
+If using a Python virtual environment with sphinx, first activate the environment.
+
+.. code-block:: none
+  :linenos:
+
+  $ source my_project/bin/activate 
 
 Create a folder for your project's documentation and make it your current working directory.  Run the sphinx-quickstart command to build the an initial Sphinx configuration.
 
