@@ -3,10 +3,18 @@ Read the Docs How To
 
 .. toctree::
    :maxdepth: 2
-   :caption: Use Cases
+   :caption: Introduction
    :glob:
 
-   use/use*
+   introduction
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ContainTheDocs
+   :glob:
+
+   ctd/setup
+   ctd/ctd*
 
 .. toctree::
    :maxdepth: 2
