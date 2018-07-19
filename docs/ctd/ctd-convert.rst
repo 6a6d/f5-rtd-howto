@@ -9,7 +9,10 @@ To convert a ``.docx`` file from Microsoft Word to reStructuredText:
 
 #. Download or ``git clone`` the `f5-agility-lab-template`_
 #. Copy your ``.docx`` file into the f5-agility-lab-template directory
-#. Run ``./containthedocs-convert.sh <filename.docx>``
+#. Run the below command at the the command line.
+
+    `bash$: `./containthedocs-convert.sh <filename.docx>``
+
 #. Your converted file will be named ``filename.rst``
 #. Images in your document will be extracted and placed in the ``media``
    directory
