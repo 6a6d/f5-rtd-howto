@@ -35,4 +35,4 @@ Verify Content Accuracy
 #. Ensure that the images were converted successfully and look correct.
 
 .. warning::
-    Images may not have converted correctly and may need to be recaptured.
+    Images may not have converted correctly and may need to be recaptured!
