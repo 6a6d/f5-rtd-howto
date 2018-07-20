@@ -3,7 +3,7 @@ Overview
 ********
 
 .. _GitHub: https://github.com/6a6d/f5-rtd-howto
-.. _Issue: https://github.com/6a6d/f5-rtd-howto/issues
+.. _issue: https://github.com/6a6d/f5-rtd-howto/issues
 
 **Support**
 
@@ -40,7 +40,7 @@ To install Sphinx locally to your home directory.
 Python Virtual Environment
 --------------------------
 
-To create a Python virtual environment and install Sphinx within said environment run the following commands.
+To create a Python virtual environment and install Sphinx within that environment run the following commands.
 
 .. code-block:: none
   :linenos:
