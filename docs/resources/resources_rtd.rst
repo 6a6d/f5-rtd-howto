@@ -25,7 +25,7 @@ RTD Resources
 
 **The Sphinx build configuration file**
 
-* http://www.sphinx-doc.org/en/master/config.html 
+* http://www.sphinx-doc.org/en/master/config.html
 
 **Documenting your project with Sphinx**
 
@@ -33,7 +33,7 @@ RTD Resources
 
 **Sphinx Read the Docs theme**
 
-* https://github.com/rtfd/sphinx_rtd_theme  
+* https://github.com/rtfd/sphinx_rtd_theme
 
 **Sphinx-autobuild**
 
