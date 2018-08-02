@@ -15,13 +15,17 @@ RTD Resources
 
 * http://www.sphinx-doc.org/en/stable/tutorial.html
 
-**Sphinx markup referance**
+**Sphinx markup reference**
 
 * http://www.sphinx-doc.org/en/stable/rest.html
 
+**reStructuredText Directives**
+
+* http://docutils.sourceforge.net/docs/ref/rst/directives.html
+
 **The Sphinx build configuration file**
 
-* http://www.sphinx-doc.org/en/master/config.html 
+* http://www.sphinx-doc.org/en/master/config.html
 
 **Documenting your project with Sphinx**
 
@@ -29,7 +33,7 @@ RTD Resources
 
 **Sphinx Read the Docs theme**
 
-* https://github.com/rtfd/sphinx_rtd_theme  
+* https://github.com/rtfd/sphinx_rtd_theme
 
 **Sphinx-autobuild**
 
