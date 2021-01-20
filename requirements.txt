@@ -40,7 +40,7 @@ sphinxcontrib-blockdiag==1.5.5
 sphinxcontrib-nwdiag==0.9.5
 sphinxcontrib-websupport==1.0.1
 tornado==5.0.1
-urllib3==1.24.1
+urllib3==1.24.2
 watchdog==0.8.3
 webcolors==1.8.1
 wrapt==1.10.11
