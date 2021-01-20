@@ -17,5 +17,4 @@ jobs:
         if [ -f ./requirements.txt ]; then pip install -r ./requirements.txt; fi
     - name: Build the Docs
       run: |
-        make -C docs clean
-        make -C docs html
+        ./containthedocs-build.sh
