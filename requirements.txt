@@ -21,7 +21,7 @@ mccabe==0.6.1
 nwdiag==1.0.4
 packaging==17.1
 pathtools==0.1.2
-Pillow==6.2.0
+Pillow==7.1.0
 port-for==0.3.1
 Pygments==2.2.0
 pylint==1.8.3
