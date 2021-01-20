@@ -1,10 +1,9 @@
 awscli
 sphinx<2.0
-f5-sphinx-theme>=2.0.2b2
+f5-sphinx-theme
 recommonmark
 sphinxjp.themes.basicstrap
 cloud_sptheme
-git+git://github.com/f5devcentral/f5-sphinx-theme@master#egg=f5_sphinx_theme
 sphinxcontrib-addmetahtml
 sphinxcontrib-nwdiag
 sphinxcontrib-blockdiag
