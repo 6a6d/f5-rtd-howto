@@ -5,10 +5,10 @@
 # ------------
 #
 # REQUIRED: Your class/lab name
-classname = "F5 BIG-IQ Centralized Management Lab"
+classname = "F5 RTD Test"
 
 # OPTIONAL: The URL to the GitHub Repository for this class
-github_repo = "https://github.com/f5devcentral/f5-big-iq-lab"
+github_repo = "https://github.com/6a6d/f5-rtd-howto"
 
 # OPTIONAL: Google Analytics
 # googleanalytics_id = 'UA-85156643-4'
@@ -69,34 +69,6 @@ if 'github_repo' in locals() and len(github_repo) > 0:
 else:
     rst_prolog += ".. |repoinfo| replace:: \ \n"
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
-on_snops = os.environ.get('SNOPS_ISALIVE', None) == 'True'
-
-print "on_rtd = %s" % on_rtd
-print "on_snops = %s" % on_snops
-
-branch_map = {
-    "stable":"master",
-    "latest":"master"
-}
-
-try:
-    if not on_rtd:
-        from git import Repo
-        repo = Repo("%s/../" % os.getcwd())
-        git_branch = repo.active_branch
-        git_branch_name = git_branch.name
-    else:
-        git_branch_name = os.environ.get('READTHEDOCS_VERSION', None)
-except:
-    git_branch_name = 'master'
-
-print "guessed git branch: %s" % git_branch_name
-
-if git_branch_name in branch_map:
-    git_branch_name = branch_map[git_branch_name]
-    print " remapped to git branch: %s" % git_branch_name
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -111,9 +83,8 @@ extensions = [
   'sphinx.ext.todo',
   'sphinx.ext.extlinks',
   'sphinx.ext.graphviz',
-  'sphinx_copybutton',
-  #'sphinxcontrib.nwdiag',
-  #'sphinxcontrib.blockdiag'
+  'sphinxcontrib.nwdiag',
+  'sphinxcontrib.blockdiag'
   #'sphinx.ext.autosectionlabel'
 ]
 
@@ -128,11 +99,6 @@ graphviz_dot_args = [
      "-Nfontname='%s'" % graphviz_font,
      "-Efontname='%s'" % graphviz_font
 ]
-
-html_context = {
-  "github_url":github_repo,
-  "github_branch":git_branch_name
-}
 
 diag_fontpath = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
 diag_html_image_format = 'SVG'
@@ -158,10 +124,6 @@ if found:
   spelling_ignore_python_builtins=True
   spelling_ignore_importable_modules=True
   spelling_filters=[]
-
-source_parsers = {
-   '.md': 'recommonmark.parser.CommonMarkParser',
-}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -214,19 +176,12 @@ todo_include_todos = True
 
 html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
-#html_theme_path = ["_themes/"]
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
 html_theme_options = {
                         'site_name': 'Community Training Classes & Labs',
                         'next_prev_link': True
                      }
 html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
-
-def setup(app):
-    app.add_stylesheet('css/f5_agility_theme.css')
-
-if on_rtd:
-    templates_path = ['_templates']
 
 extlinks = {
     'issues':( ("%s/issues/%%s" % github_repo), 'issue ' )
@@ -250,49 +205,6 @@ cleanname = re.sub('\W+','',classname)
 
 # Output file base name for HTML help builder.
 htmlhelp_basename =  cleanname + 'doc'
-
-# -- Options for LaTeX output ---------------------------------------------
-
-front_cover_image = 'front_cover'
-back_cover_image = 'back_cover'
-
-front_cover_image_path = os.path.join('_static', front_cover_image + '.png')
-back_cover_image_path = os.path.join('_static', back_cover_image + '.png')
-
-latex_additional_files = [front_cover_image_path, back_cover_image_path]
-
-template = string.Template(open('preamble.tex').read())
-
-latex_contents = r"""
-\frontcoverpage
-\contentspage
-"""
-
-backcover_latex_contents = r"""
-\backcoverpage
-"""
-
-latex_elements = {
-    'papersize': 'letterpaper',
-    'pointsize': '10pt',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'preamble': template.substitute(eventname=eventname,
-                                    project=project,
-                                    author=author,
-                                    frontcoverimage=front_cover_image,
-                                    backcoverimage=back_cover_image),
-
-    'tableofcontents': latex_contents,
-    'printindex': backcover_latex_contents
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, '%s.tex' % cleanname, u'%s Documentation' % classname,
-     u'F5 Networks, Inc.', 'manual', True),
-]
 
 # -- Options for manual page output ---------------------------------------
 
