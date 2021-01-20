@@ -4,7 +4,7 @@ jobs:
   build-the-docs:
     runs-on: ubuntu-latest
     steps:
-      - run: ./containthedocs-build.sh
+      - run: "./containthedocs-build.sh"
 
   container-job:
     runs-on: ubuntu-latest
