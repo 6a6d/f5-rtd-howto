@@ -1,15 +1,5 @@
 name: Build the Docs
-
-on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+on: [push]
 jobs:
   container-job:
     runs-on: ubuntu-latest
