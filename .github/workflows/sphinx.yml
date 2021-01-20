@@ -10,6 +10,6 @@ jobs:
         # The folder containing your sphinx docs.
         docs-folder: docs/
         # The command used to build your documentation.
-        build-command: make html
+        build-command: make -C docs html
         # Run before the build command, you can use this to install system level dependencies, for example with "apt-get update -y && apt-get install -y perl"
         pre-build-command: python -m pip install --upgrade pip
