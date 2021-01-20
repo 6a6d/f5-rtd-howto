@@ -105,3 +105,6 @@ rtd-env/*
 
 # vs code
 .vscode
+
+# Mac OSX
+.DS_Store
