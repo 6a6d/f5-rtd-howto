@@ -3,6 +3,10 @@ import sys
 import time
 import pkgutil
 import sphinx_rtd_theme
+import sphinx.application
+import sphinx.errors
+
+sphinx.application.ExtensionError = sphinx.errors.ExtensionError
 
 # -*- coding: utf-8 -*-
 #
@@ -180,12 +184,15 @@ todo_include_todos = True
 
 html_theme = "sphinx_rtd_theme"
 html_theme_path = sphinx_rtd_theme.get_html_theme_path()
+html_theme_path = [
+    "_themes",
+]
 html_sidebars = {
     "**": ["searchbox.html", "localtoc.html", "globaltoc.html", "relations.html"]
 }
 html_theme_options = {
-    "site_name": "Community Training Classes & Labs",
-    "next_prev_link": True,
+    # "site_name": "Community Training Classes & Labs",
+    # "next_prev_link": True,
 }
 html_last_updated_fmt = "%Y-%m-%d %I:%M:%S"
 
