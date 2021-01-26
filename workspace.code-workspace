@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"restructuredtext.confPath": "${workspaceFolder}/docs",
+		"python.pythonPath": "${workspaceFolder}/.env/bin/python"
+	}
+}
