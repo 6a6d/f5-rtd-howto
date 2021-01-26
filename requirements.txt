@@ -10,6 +10,6 @@ sphinx-autobuild
 sphinx-rtd-theme
 sphinxcontrib-addmetahtml
 sphinxcontrib-blockdiag
+sphinxcontrib-googleanalytics
 sphinxcontrib-nwdiag
-sphinxjp.themes.basicstrap
 sphinxjp.themes.basicstrap
