@@ -3,13 +3,6 @@ Read the Docs How To
 
 .. toctree::
    :maxdepth: 2
-   :caption: Introduction
-   :glob:
-
-   introduction
-
-.. toctree::
-   :maxdepth: 2
    :caption: ContainTheDocs
    :glob:
 
