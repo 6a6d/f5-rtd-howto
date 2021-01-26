@@ -6,6 +6,7 @@
 	],
 	"settings": {
 		"restructuredtext.confPath": "${workspaceFolder}/docs",
-		"python.pythonPath": "${workspaceFolder}/.env/bin/python"
+		"restructuredtext.builtDocumentationPath": "${workspaceFolder}/docs/_build",
+		"python.pythonPath": ".env/bin/python"
 	}
 }
