@@ -100,11 +100,11 @@ ENV/
 # mypy
 .mypy_cache/
 
-# virtual env
-rtd-env/*
+# Python virtual env
+.env/
 
 # vs code
-.vscode
+.vscode/
 
 # Mac OSX
 .DS_Store
