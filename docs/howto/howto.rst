@@ -18,8 +18,7 @@ Globally
 --------
 To install Sphinx globally run the below pip commands from your favorite CLI.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ pip install sphinx
   $ pip install sphinx-autobuild
@@ -30,8 +29,7 @@ Locally
 
 To install Sphinx locally to your home directory.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ pip install --user sphinx
   $ pip install --user sphinx-autobuild
@@ -42,8 +40,7 @@ Python Virtual Environment
 
 To create a Python virtual environment and install Sphinx within that environment run the following commands.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ pip install virtualenv
   $ cd my_project_folder
@@ -55,8 +52,7 @@ To create a Python virtual environment and install Sphinx within that environmen
 
 If you want to exit the virtual environment, use the below command.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ deactivate
 
@@ -65,22 +61,19 @@ Create the Sphinx Environment
 
 Change to your project directory.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ cd my_project
 
 If using a Python virtual environment with sphinx, first activate the environment.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
-  $ source my_project/bin/activate 
+  $ source my_project/bin/activate
 
 Create a folder for your project's documentation and make it your current working directory.  Run the sphinx-quickstart command to build the an initial Sphinx configuration.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ mkdir docs
   $ cd docs
@@ -88,7 +81,7 @@ Create a folder for your project's documentation and make it your current workin
 
 Accept the defaults.  These can be changed later.
 
-.. code-block:: none
+.. code-block:: bash
 
   $ sphinx-quickstart
   Welcome to the Sphinx 1.5.5 quickstart utility.
@@ -159,7 +152,6 @@ Customize the Sphinx Environment
 Configure your conf.py file to apply the Read the Docs theme.  Add an "import sphinx_rtd_theme" near the top of the config file just under the other import statements that are commented out.
 
 .. code-block:: python
-  :linenos:
 
   # import os
   # import sys
@@ -167,8 +159,7 @@ Configure your conf.py file to apply the Read the Docs theme.  Add an "import sp
 
 Comment out the default Sphinx theme.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: python
 
   html_theme = 'alabaster'
   # html_theme = 'alabaster'
@@ -176,15 +167,13 @@ Comment out the default Sphinx theme.
 Add the below lines to the bottom of the config file.
 
 .. code-block:: python
-  :linenos:
 
   html_theme = "sphinx_rtd_theme"
   html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 Verify that everything is working with sphinx-autobuild.
 
-.. code-block:: none
-  :linenos:
+.. code-block:: bash
 
   $ sphinx-autobuild docs docs/_build/html
 

@@ -6,7 +6,7 @@ Configuration & Use
 
 To use this template:
 
-#. Download or ``git clone`` the `f5-agility-lab-template`_
+#. Download or ``git clone`` the `f5-sphinx-theme`_
 #. Copy contents of this repo to a new directory ``cp -Rf . /path/to/your/docs``
 #. ``cd /path/to/your/docs``
 #. Edit ``docs/conf.py``

@@ -10,7 +10,7 @@ Via Python Package
 
 Install the required Python packages.
 
-.. code-block:: none
+.. code-block:: bash
 
   $ pip install sphinx_rtd_theme
   $ pip install restructuredtext_lint

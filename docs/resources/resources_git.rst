@@ -16,4 +16,3 @@ Bugs and enhancements can be made by opening an `issue`_ within the `GitHub`_ re
 **F5 Agility Lab Template**
 
 * https://github.com/0xHiteshPatel/f5-agility-lab-template
-
