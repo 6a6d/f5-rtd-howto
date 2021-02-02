@@ -5,8 +5,9 @@
 		}
 	],
 	"settings": {
+		"workbench.colorTheme": "Default Dark+",
+		"workbench.iconTheme": "vscode-icons",
 		"restructuredtext.confPath": "${workspaceFolder}/docs",
 		"restructuredtext.builtDocumentationPath": "${workspaceFolder}/docs/_build",
-		"python.pythonPath": ".env/bin/python"
 	}
 }

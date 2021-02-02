@@ -101,7 +101,7 @@ ENV/
 .mypy_cache/
 
 # Python virtual env
-.env/
+.virtualenv/
 
 # vs code
 .vscode/
