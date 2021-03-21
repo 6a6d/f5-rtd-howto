@@ -2,15 +2,15 @@
 Windows Installation
 ********************
 
-Windows 7
-=========
+Windows 10
+==========
 
 Via Python Package
 ------------------
 
 Install the required Python packages.
 
-.. code-block:: none
+.. code-block:: bash
 
   $ pip install sphinx_rtd_theme
   $ pip install restructuredtext_lint
@@ -18,10 +18,3 @@ Install the required Python packages.
   $ pip install f5-sphinx-theme
   $ pip install sphinxjp.themes.basicstrap
   $ pip install recommonmark
-
-Windows 10
-==========
-
-.. todo::
-
-  Insert Windows 10 specific instructions.

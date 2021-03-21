@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"restructuredtext.confPath": "${workspaceFolder}/docs",
+		"restructuredtext.builtDocumentationPath": "${workspaceFolder}/docs/_build",
+		"python.pythonPath": ".env/bin/python"
+	}
+}

@@ -33,9 +33,9 @@ Depending on your publication/deployment process, you may have to re-build your 
 
 Customizing CSS and Assets
 ==========================
-The css styling for the project uses two css files: 
+The css styling for the project uses two css files:
 
-- ``f5.css`` contains F5's core bootstrap customizations and fonts. 
+- ``f5.css`` contains F5's core bootstrap customizations and fonts.
 - ``custom.css`` can be used for any modifications you'd like to make for your documentation to make content easier to navigate and reference. Bear in mind that all mods must still comply with the F5 Corporate Branding strategy and requirements.
 
 After customizing the ``custom.css`` file, you'll have to uninstall the theme and reinstall it to apply your changes.
@@ -67,7 +67,7 @@ To add a Font Awesome icon to your docs: ::
 TMSH/TMOS code blocks
 `````````````````````
 
-The ``f5-sphinx-theme`` has special CSS styling for TMSH/TMOS code blocks. To use: 
+The ``f5-sphinx-theme`` has special CSS styling for TMSH/TMOS code blocks. To use:
 
 .. parsed-literal::
 
