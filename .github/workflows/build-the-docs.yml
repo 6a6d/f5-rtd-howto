@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docs
       run: |
         ./containthedocs-build.sh
-        cp ./versions.json _build/
+        cp $PWD/versions.json $PWD/docs/_build/
