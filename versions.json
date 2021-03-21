@@ -1,16 +1,10 @@
 {
     "versionMetaTimestamp": 1594310691,
     "latestVersion": {
-      "name": "latest",
-      "url": "/products/big-iq/mgmt-api/v0.0/"
+      "name": "master",
+      "url": "/"
     },
     "otherVersions": [
-      { "name": "5.4", "url": "/products/big-iq/mgmt-api/v5.4/"},
-      { "name": "6.0.0", "url": "/products/big-iq/mgmt-api/v6.0.0/"},
-      { "name": "6.0.1", "url": "/products/big-iq/mgmt-api/v6.0.1/"},
-      { "name": "6.1.0", "url": "/products/big-iq/mgmt-api/v6.1.0/"},
-      { "name": "7.0.0", "url": "/products/big-iq/mgmt-api/v7.0.0/"},
-      { "name": "7.1.0", "url": "/products/big-iq/mgmt-api/v7.1.0/"},
-      { "name": "8.0.0", "url": "/products/big-iq/mgmt-api/v8.0.0/"}
+      { "name": "dev", "url": "/dev/"}
     ]
   }
