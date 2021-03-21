@@ -23,4 +23,7 @@ jobs:
     - name: Build the Docs
       run: |
         ./containthedocs-build.sh
+
+    - name: Copy versions.json
+      run: |
         sudo cp $PWD/versions.json $PWD/docs/_build/
