@@ -2,37 +2,31 @@
 
 [ "$DEBUG" == 'true' ] && set -x
 
+##
+# global variables
+##
 VENV=${PWD}/.virtualenv
 CTD_IMG=f5devcentral/containthedocs:latest
-COMMAND="make -C docs/ html"
+PC_CONFIG=https://raw.githubusercontent.com/6a6d/f5-rtd-howto/master/.pre-commit-config.yaml
 
-function ctd-make() {
-  docker run --rm -i \
-    -v "$PWD":"$PWD" --workdir "$PWD" \
-    ${DOCKER_RUN_ARGS} \
-    -e "LOCAL_USER_ID=$(id -u)" \
-    ${CTD_IMG} ${COMMAND}
+##
+# supporting functions
+##
+function _activate() {
+  source ./${VENV}/bin/activate
 }
 
-function code-server() {
-  docker run -it --name code-server -p 127.0.0.1:8080:8080 \
-    -v "$HOME/.config:/home/coder/.config" \
-    -v "$PWD:/home/coder/project" \
-    -u "$(id -u):$(id -g)" \
-    -e "DOCKER_USER=$USER" \
-    --rm \
-    code-server-etd:latest /home/coder/project
-}
-
-# codercom/code-server:latest
-
-function setup-python() {
+# development environment setup
+function setup-dev-environment() {
   echo "// setup Python virtual environment"
 
   if [ ! -d ${VENV} ]
   then
     python3 -m venv ${VENV}
+    _activate
+    pip3 install --upgrade pip
     pip3 install -r ${PWD}/requirements.txt
+    pip3 install pre-commit
 
   else
     echo ">> virtual environment exists!"
@@ -40,47 +34,33 @@ function setup-python() {
 
   if [ -d ${VENV} ]
   then
-    source ${PWD}/${VENV}/bin/activate
+    _activate
+    pip3 install --upgrade pip
     pip3 install -r ${PWD}/requirements.txt
+    pip3 install pre-commit
 
     echo ">> Python packages installed!"
   fi
+
+  pc-setup
 }
 
-function pre-commit() {
+# pre-commit setup
+function pc-setup() {
   echo "// setup Git pre-commit hooks"
-  setup-python
 
-  pip install pre-commit
-
-  if [ ! -f "${PWD}/.pre-commit-config.yaml" ]
+  if [ -f "${PWD}/.pre-commit-config.yaml" ]
   then
-    echo ">> grabbing .pre-commit-config.yaml"
-    wget https://raw.githubusercontent.com/6a6d/f5-rtd-howto/master/.pre-commit-config.yaml
+    echo ">> .pre-commit config exists!"
+
+  elif [ ! -f "${PWD}/.pre-commit-config.yaml" ]
+  then
+    echo ">> grabbing .pre-commit config"
+    wget ${PC_CONFIG}
     pre-commit install
   fi
-}
 
-function code-server-install() {
-  echo "// code-server install"
-
-  # working release (2020.5.80290) of ms python extension for code-server
-  #https://github.com/microsoft/vscode-python/releases/download/2020.5.80290/ms-python-release.vsix
-
-  mkdir -p ~/.config
-
-  #curl -fsSL https://code-server.dev/install.sh | sh -s -- --dry-run
-
-  code-server
-}
-
-function code-server-configure() {
-  echo "// code-server configure"
-
-  cat extensions.txt | while read extension || [[ -n $extension ]];
-  do
-    code-server --install-extension $extension --force
-  done
+  pre-commit run --all-files
 }
 
 ##
@@ -88,22 +68,9 @@ function code-server-configure() {
 ##
 if [ "${1}" == "" ]
 then
-  setup-python
-
-elif [ "${1}" == "code-server-setup" ]
-then
-  code-server-install
-  code-server-configure
-
-elif [ "${1}" == "code-server" ]
-then
-  code-server
-
-elif [ "${1}" == "ctd" ]
-then
-  ctd-make
+  setup-dev-environment
 
 elif [ "${1}" == "pre-commit" ]
 then
-  pre-commit
+  pc-setup
 fi
