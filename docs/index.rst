@@ -2,33 +2,33 @@ Read the Docs How To
 =====================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: ContainTheDocs
-   :glob:
+    :maxdepth: 2
+    :caption: ContainTheDocs
+    :glob:
 
-   ctd/setup
-   ctd/ctd*
+    ctd/setup
+    ctd/ctd*
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Installing RTD
-   :glob:
+ .. toctree::
+    :maxdepth: 2
+    :caption: Installing RTD
+    :glob:
 
-   howto/howto*
+    howto/howto*
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Resources
-   :glob:
+ .. toctree::
+    :maxdepth: 2
+    :caption: Resources
+    :glob:
 
-   resources/resources*
+    resources/resources*
 
-.. toctree::
-   :maxdepth: 2
-   :caption: FAQ
-   :glob:
+ .. toctree::
+    :maxdepth: 2
+    :caption: FAQ
+    :glob:
 
-   faq/faq.rst
+    faq/faq.rst
 
 Indices and tables
 ==================

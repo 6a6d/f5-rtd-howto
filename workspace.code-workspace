@@ -9,5 +9,11 @@
 		"workbench.iconTheme": "vscode-icons",
 		"restructuredtext.confPath": "${workspaceFolder}/docs",
 		"restructuredtext.builtDocumentationPath": "${workspaceFolder}/docs/_build",
+		"restructuredtext.linter.extraArgs": [
+			"--ignore D002",
+			"--ignore D002",
+			"--ignore D003",
+			"--ignore D004"
+		]
 	}
 }

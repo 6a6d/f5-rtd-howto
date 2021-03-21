@@ -81,7 +81,7 @@ Create a folder for your project's documentation and make it your current workin
 
 Accept the defaults.  These can be changed later.
 
-.. code-block:: bash
+.. admonition:: TMSH
 
   $ sphinx-quickstart
   Welcome to the Sphinx 1.5.5 quickstart utility.

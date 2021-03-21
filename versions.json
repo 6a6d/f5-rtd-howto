@@ -1,0 +1,10 @@
+{
+  "versionMetaTimestamp": 1523306837369,
+  "latestVersion": {
+    "name": "15",
+    "url": "/v15"
+  },
+  "otherVersions": [
+    { "name": "14", "url": "/v14"}
+  ]
+}
