@@ -2,9 +2,9 @@ import os
 import sys
 import time
 import pkgutil
-import sphinx_rtd_theme
 import sphinx.application
 import sphinx.errors
+import f5_sphinx_theme
 
 sphinx.application.ExtensionError = sphinx.errors.ExtensionError
 
@@ -21,7 +21,7 @@ classname = "F5 ReadTheDocs HowTo"
 github_repo = "https://github.com/6a6d/f5-rtd-howto"
 
 # OPTIONAL: Google Analytics
-googleanalytics_id = "G-Q92T3NPFZJ"
+# googleanalytics_id = "G-Q92T3NPFZJ"
 
 #
 # END CONFIG
@@ -87,18 +87,18 @@ else:
 # ones.
 
 extensions = [
-    "sphinx_rtd_theme",
     "sphinx.ext.todo",
     "sphinx.ext.extlinks",
     "sphinx.ext.graphviz",
-    # "sphinxcontrib.nwdiag",
-    # "sphinxcontrib.blockdiag",
+    "sphinxcontrib.nwdiag",
+    "sphinxcontrib.blockdiag",
+    "sphinx_copybutton",
     "sphinx.ext.autosectionlabel",
 ]
 
-if "googleanalytics_id" in locals() and len(googleanalytics_id) > 0:
-    extensions += ["sphinxcontrib.googleanalytics"]
-    googleanalytics_enabled = True
+# if "googleanalytics_id" in locals() and len(googleanalytics_id) > 0:
+#    extensions += ["sphinxcontrib.googleanalytics"]
+#    googleanalytics_enabled = True
 
 graphviz_output_format = "svg"
 graphviz_font = "DejaVu Sans:style=Book"
@@ -182,18 +182,16 @@ todo_include_todos = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 
-html_theme = "sphinx_rtd_theme"
-html_theme_path = sphinx_rtd_theme.get_html_theme_path()
-html_theme_path = [
-    "_themes",
-]
+html_theme = "f5_sphinx_theme"
+html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {
     "**": ["searchbox.html", "localtoc.html", "globaltoc.html", "relations.html"]
 }
 html_theme_options = {
-    # "site_name": "Community Training Classes & Labs",
-    # "next_prev_link": True,
+    "site_name": "Community Training Classes & Labs",
+    "next_prev_link": True,
 }
+
 html_last_updated_fmt = "%Y-%m-%d %I:%M:%S"
 
 extlinks = {"issues": (("%s/issues/%%s" % github_repo), "issue ")}
