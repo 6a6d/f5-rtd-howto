@@ -23,13 +23,6 @@ Read the Docs How To
 
    resources/resources*
 
-.. toctree::
-   :maxdepth: 2
-   :caption: FAQ
-   :glob:
-
-   faq/faq.rst
-
 Indices and tables
 ==================
 
