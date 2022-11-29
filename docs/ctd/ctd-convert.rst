@@ -2,13 +2,13 @@
 Converting from Microsoft Word
 ******************************
 
-.. _f5-sphinx-theme: https://github.com/0xHiteshPatel/f5-sphinx-theme
-.. _f5-agility-lab-template: https://github.com/0xHiteshPatel/f5-agility-lab-template.git
+.. _f5-sphinx-theme: https://github.com/f5devcentral/f5-sphinx-theme
+.. _f5-agility-labs-template: https://github.com/f5devcentral/f5-agility-labs-template
 
 To convert a ``.docx`` file from Microsoft Word to reStructuredText:
 
-#. Download or ``git clone`` the `f5-agility-lab-template`_
-#. Copy your ``.docx`` file into the f5-agility-lab-template directory
+#. Download or ``git clone`` the `f5-agility-labs-template`_
+#. Copy your ``.docx`` file into the f5-agility-labs-template directory
 #. Run the below command at the the command line.
 
     `bash$: `./containthedocs-convert.sh <filename.docx>``
